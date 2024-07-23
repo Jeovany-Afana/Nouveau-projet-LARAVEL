@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('fiches', function (Blueprint $table) {
             $table->id();
+            $table->string('intitule');
+            $table->integer('coursMagistral')->default(0);
+            $table->integer('traveauxDiriges')->default(0);
+            $table->date('devoir');
+            $table->date('examenFinal');
             $table->timestamps();
         });
     }

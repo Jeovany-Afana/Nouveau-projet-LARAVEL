@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('cahiers', function (Blueprint $table) {
             $table->id();
+            $table->enum('niveau',['1','2','3','Master']);
+            $table->enum('filiere',['INFORMATIQUE', 'TRANSPORT LOGISTIQUE','GESTION', 'AGRO-BUSINESS', 'DROIT'])->default('INFORMATIQUE');
             $table->timestamps();
         });
     }
