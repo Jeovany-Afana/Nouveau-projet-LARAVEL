@@ -19,7 +19,7 @@ class HomeController extends Controller
 
     public function login()
     {
-      return view('login');
+      return view('pages.login');
     }
 
 /**
@@ -29,7 +29,7 @@ class HomeController extends Controller
  */
     public function inscription_responsable()
     {
-      return view('inscription_responsable');
+      return view('Students_Interfaces.inscription_responsable');
     }
 
 /**
@@ -37,29 +37,33 @@ class HomeController extends Controller
  */
     public function liste_responsables()
     {
-      return view('liste_responsables_classe');
+      return view('Admin.liste_responsables_classe');
     }
 
     public function inscription_prof()
     {
-      return view('inscription_prof');
+      return view('Teacheri_Interfaces.inscription_prof');
     }
 
     public function liste_prof()
     {
-      return view('liste_prof');
+      return view('Admin.liste_prof');
     }
 
     public function profile_responsable()
     {
-      return view('profile_responsable');
+      return view('Students_Interfaces.profile_responsable');
     }
 
     public function profile_prof()
     {
-      return view('profile_prof');
+      return view('Teacher_Interfaces.profile_prof');
     }
 
+    public function affiche_fiche()
+      {
+        return view('Interfaces_Fiches.affiche_fiche');
+      }
     /**
      * Store a newly created resource in storage.
      *

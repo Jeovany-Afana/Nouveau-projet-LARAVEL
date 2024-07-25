@@ -27,3 +27,4 @@ Route::get('/liste_responsables_classe', [HomeController::class, 'liste_responsa
 Route::get('/inscription_responsable', [HomeController::class, 'inscription_responsable'])->name('inscription_responsable');
 Route::get('/profile_responsable', [HomeController::class, 'profile_responsable']);
 Route::get('/profile_prof', [HomeController::class, 'profile_prof'])->name('profile_prof');
+Route::get('/affiche_fiche', [HomeController::class, 'affiche_fiche']);
