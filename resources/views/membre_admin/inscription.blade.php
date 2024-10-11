@@ -4,7 +4,7 @@
 
 <div class="body">
     <br><br>
-    <form action="{{URL::to('/savestudent')}}" method="post">
+    <form action="{{URL::to('/saveAdmin')}}" method="post">
                            
         @csrf
         <div class="row clearfix">
@@ -21,22 +21,7 @@
     </div>
     <div class="row clearfix">
 
-        <div class="col-md-3 col-sm-12">
-            <div class="form-group">
-                <input type="number" class="form-control"  name="cahier_id" placeholder="Identifiant du cahier">
-            </div>
-        </div>
        
-        <div class="col-md-3 col-sm-12">
-            <div class="form-group">
-                <select name="departement" id="departement" class="form-control">
-                    <option value="0" disabled selected>Département</option>
-                    <option value="1">ESITEC</option>
-                    <option value="2">MERCURE</option>
-                </select>
-            </div>
-        </div>
-      
         <div class="col-md-4 col-sm-12">
             <div class="form-group">
                 <input type="text" name="telephone" class="form-control" placeholder="Numéro de téléphone">
@@ -53,7 +38,7 @@
         <div class="col-sm-12">
             <input type="submit" value="Enregistrer" class="btn btn-primary">
         </div>
-       </div>
+    </div>
     </form>
 </div>
     

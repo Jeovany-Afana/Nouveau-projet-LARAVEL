@@ -11,9 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('users', function (Blueprint $table) {
+        Schema::table('responsables', function (Blueprint $table) {
             //
-            $table->string('role')->default('user');
+            $table->enum('departement', ['ESITEC', 'MERCURE']);
+            $table->removeColumn('signature');
         });
     }
 
@@ -22,9 +23,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('users', function (Blueprint $table) {
+        Schema::table('responsables', function (Blueprint $table) {
             //
-            $table->dropColumn('role');
         });
     }
 };

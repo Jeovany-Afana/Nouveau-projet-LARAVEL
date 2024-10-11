@@ -24,9 +24,82 @@
 </li>
     
 @endsection
-
-
 @section('title')
     Home
 @endsection
+
+@section('contenu')
+    
+<style>
+    .accueil {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to right, #40bffa, #4b8af7);
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    h1 {
+        font-size: 3em;
+        margin: 0;
+        animation: fadeIn 1.5s ease-in;
+    }
+
+    .paragraphe {
+        font-size: 1.2em;
+        margin: 20px 0;
+        animation: fadeIn 2s ease-in;
+    }
+
+    .buttonIndex {
+        background-color: #ff5722;
+        border: none;
+        padding: 15px 30px;
+        font-size: 1.2em;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        animation: fadeIn 2.5s ease-in;
+    }
+
+    .buttonIndex:hover {
+        background-color: #e64a19;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+   
+</style>
+
+<div class="accueil">
+<h1>Bienvenue sur notre Application</h1>
+    <p class="paragraphe">Découvrez une nouvelle manière de gérer le cahier de texte <br>Vous êtes : </p>
+
+    @if (Auth::check())
+       
+    @else
+    <button class="buttonIndex" onclick="location.href='loginProf'">Un proffesseurs</button><br>
+    <button class="buttonIndex" onclick="location.href='loginStudent'">Un responsable de classe</button><br>
+    <button class="buttonIndex" onclick="location.href='loginAdmin'">Un membre de l'aministration</button>
+    @endif
+   
+</div>
+    @endsection
 

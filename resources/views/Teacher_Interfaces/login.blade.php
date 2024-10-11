@@ -45,18 +45,18 @@ button
                     </div>
 					<div class="card">
                         <div class="header">
-                            <p class="lead">Connectez-vous à votre compte</p>
+                            <p class="lead">Connexion Enseigant</p>
                         </div>
                         <div class="body">
-                            <form class="form-auth-small" action="{{URL::to('/login')}}" method="post">
+                            <form class="form-auth-small" action="{{URL::to('/teacherlogin')}}" method="post">
                                 @csrf
                                 <div class="form-group">
                                     <label for="signin-email" class="control-label sr-only">Adresse mail</label>
-                                    <input type="email" name="email" class="form-control" id="signin-email" value="user@domain.com" placeholder="Adresse mail">
+                                    <input type="email" class="form-control" name="email" id="signin-email" value="user@domain.com" placeholder="Adresse mail">
                                 </div>
                                 <div class="form-group">
                                     <label for="signin-password" class="control-label sr-only">Mot de passe</label>
-                                    <input type="password" name="password" class="form-control" id="signin-password" value="thisisthepassword" placeholder="Mot de passe">
+                                    <input type="password" class="form-control" name="password" id="signin-password" value="thisisthepassword" placeholder="Mot de passe">
                                 </div>
                                 <div class="form-group clearfix">
                                     <label class="fancy-checkbox element-left">
@@ -67,7 +67,12 @@ button
                                 <button type="submit" class="btn btn-primary btn-lg btn-block" style="border: 3px solid #5db5df; background-color: white; color: #5db5df; font-weight:bold;">LOGIN</button>
                                 <div class="bottom">
                                     <span class="helper-text m-b-10"><i class="fa fa-lock"></i> <a href="page-forgot-password.html">Mot de passe oublié ?</a></span>
-                                    <span>Vous n'avez pas de compte ? <a href="page-register.html">Créer un compte</a></span>
+                                    <span>Vous n'avez pas de compte ? <a href="inscription_prof">Créer un compte</a></span>
+                                
+                                    <br><br>
+
+                                    <a class="btn btn-primary" href="{{URL::to('index')}}" style="margin-left: 0.5%; background-color: #0056b3;">Aller à l'acceuil</a>
+                                
                                 </div>
                             </form>
              

@@ -77,7 +77,11 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="page-login.html" class="icon-menu"><i class="fa fa-power-off"></i></a>
+
+                         @auth
+                        
+                            <a href="{{URL::to('/logout')}}" class="icon-menu"><i class="fa fa-power-off"></i></a>
+                         @endauth
                         </li>
                     </ul>
                 </div>
